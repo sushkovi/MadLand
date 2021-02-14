@@ -215,6 +215,8 @@ label{
 
 
 table {
+  position: relative;
+  bottom: 40px;
   margin-top: 40px;
   width: 100%;
   background-color: white;
@@ -222,6 +224,7 @@ table {
   display: none;
   border-collapse: collapse;
   overflow: hidden;
+  
 }
 caption {
   padding-bottom: 20px;
