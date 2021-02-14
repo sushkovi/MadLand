@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link href="css/normalize.css" rel="stylesheet" type="text/css">
+  <link href="css/webflow.css" rel="stylesheet" type="text/css">
+  <link href="css/style.css" rel="stylesheet" type="text/css">
+  <meta charset="UTF-8">
+  <link rel="shortcut icon" href="images/logocat2.png" type="image/png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>MADCAT | LandName&WhitePage</title>
+</head>
+
+<body>
+
+  <div class="main"  id="man">
+    <div class="kog" id="kogt">
+      <div class="div-block"><img src="images/Cat.png" loading="lazy" sizes="100px"
+          srcset="images/Cat.png 500w, images/Cat.png 800w, images/Cat.png 1080w, images/Cat.png 1533w" alt=""
+          class="image"><img src="images/madcat.png" loading="lazy" sizes="300px"
+          srcset="images/madcat.png 500w, images/madcat.png 800w, images/madcat.png 1080w, images/madcat.png 1600w, images/madcat.png 2000w, images/madcat.png 2379w"
+          alt="" class="image-2"></div>
+      <div class="modal" id="firstmodal">
+        <h1>LandName &amp; WhitePage</h1>
+        <div class="groupbtn">
+          <a id="firstbtn" class="btn w-button">LandName</a>
+          <a id="secondbtn" class="btn w-button">WhitePage</a>
+        </div>
+      </div>
+
+
+      <div class="modal" id="secondmodal">
+        <h1>
+          LandName
+        </h1>
+
+        <!-- <select id="baer" class="baer_option" >
+          <option disabled selected>Выбери Баер</option>
+          <option value="Ip31AnD37">Рылко Андрей</option>
+          <option value="Ar513OplW">Луценко Артем</option>
+          <option value="aV1Dn190k">Воронович Владислав</option>
+          <option value="0hqMkl1Zx3">Гучёк Мария</option>
+          <option value="Iw20yak1n">Хотько Иван</option>
+          <option value="q19u4I8ra">Жуковский Юрий</option>
+          <option value="19Va57ri03">Климченя Валерий</option>
+          <option value="iLL913makT">Кулик Илья</option>
+          <option value="Kr1z0tn7">Позднякова Кристина</option>
+          <option value="G0oD1mm">Качура Дмитрий</option>
+          <option value="aN1o4">Дроздов Антон</option>
+          <option value="R010M90a">Либер Роман</option>
+          
+        </select> -->
+        <label for="geotext">Введите Гео через пробел</label>
+        <input type="text" id="geotext" class="textgeo" placeholder="Италия Португалия ...">
+        <!-- <label for="idstream">Введите ID Keitaro через пробел</label>
+        <input type="text" id="idstream" class="textgeo" placeholder="1ZYvbj1v qnJVptzG ...">
+           -->
+            
+        <button class="btn" id="gobtn">
+          Отправить
+        </button>
+      </div>
+      <div class="modal" id="thirdmodal">
+        <h1>
+          WhitePage
+        </h1>
+        <p>
+          Введите Гео через " ", Гео состоящие из двух слов пишутся слитно
+        </p>
+        <input type="text" id='geotext1' class="textgeo" placeholder="Италия, Португалия ...">
+        <button class="btn" id="gobtn1">
+          Отправить
+        </button>
+      </div>
+      <div class="buttonrepit">
+        <img src="images/update-arrow.png" alt="">
+      </div>
+      <table id='tableelem'>
+        <caption class="cap">LandName</caption>
+        <thead>
+          <tr>
+            <th>№</th>
+            <!-- <th>ID Keitaro</th> -->
+            <th>Гео</th>
+            <th>landName</th>
+            
+          </tr>
+        </thead>
+        <tbody id="tbodyelem">
+
+        </tbody>
+      </table>
+      <!-- <textarea name="" id="textare" cols="30" rows="10"></textarea> -->
+      
+
+    </div>
+    
+
+  <div class="cat-loader" id="loader">
+    <div class="cat-lower">
+      <div class="wrapper bkg-stretch">
+        <div></div>
+      </div>
+      <div class="wrapper cat-jj">
+        <div></div>
+      </div>
+      <div class="wrapper bkg">
+        <div></div>
+      </div>
+      <div class="wrapper cat-ass">
+        <div></div>
+      </div>
+      <div class="wrapper inner-leg">
+        <div class="cat-leg">
+          <div></div>
+        </div>
+      </div>
+      <div class="wrapper outer-leg">
+        <div class="cat-leg">
+          <div></div>
+        </div>
+      </div>
+    </div>
+    <div class="cat-upper">
+      <div class="wrapper bkg-stretch">
+        <div></div>
+      </div>
+      <div class="wrapper cat-face">
+        <div class="face-shape">
+          <div></div>
+        </div>
+        <div class="ears"></div>
+        <div class="wisker">
+          <div></div>
+          <div></div>
+        </div>
+        <div class=eyes></div>
+        <div class=mouth>
+          <div>
+            <div>
+              <div></div>
+            </div>
+            <div>
+              <div></div>
+            </div>
+          </div>
+          <div></div>
+        </div>
+      </div>
+      <div class="wrapper body"></div>
+      <div class="wrapper inner-leg">
+        <div class="cat-leg">
+          <div></div>
+        </div>
+      </div>
+      <div class="wrapper outer-leg">
+        <div class="cat-leg">
+          <div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <script src="js/landname.js"></script>
+  <script src="js/whitepage.js"></script>
+  <!-- <script src="randomplacement.js"></script> -->
+  <!-- <script src="app.js"></script> -->
+</body>
+
+</html>
