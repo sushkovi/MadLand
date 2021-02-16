@@ -25,7 +25,7 @@
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  width: 800px;
+  
   height: 600px;
   
   -webkit-box-orient: vertical;

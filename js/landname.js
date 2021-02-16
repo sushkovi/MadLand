@@ -1,20 +1,19 @@
 // const geoArr = [at, al, be, bg, ba, hu, gt, de, gr, eg, id, es, it, cy, co, xk, cr, lv, lt, lu, mk, mx, nl, pe, pl, pt, ro, rs, sg, sk, sl, ph, ph, hr, cz, cl, ch, ua, kz, tr, md, ae, ma, uz, ca, vn, sa];
 // AIzaSyD0go7rLw-pTS_iHpJlqeJ0SOLMRsN84mM
 function getApi(url) {
-    return new Promise(function(resolve, reject) {
+    return new Promise(function (resolve, reject) {
         let req = new XMLHttpRequest();
         req.onload = () => {
             if (req.status == 200) {
                 resolve(req.response);
-            }
-            else {
+            } else {
                 reject(req.status);
             }
         };
         req.open('GET', url, true);
         req.responseType = 'json';
         req.send();
-    }); 
+    });
 };
 
 const landName = document.getElementById('firstbtn');
@@ -53,7 +52,7 @@ goBtn.onclick = () => {
     geoFunc(geoGeo);
 }
 
-function geoFunc ( nameGeo) {
+function geoFunc(nameGeo) {
     // arrIdStream = idStream.split(' ');
     arrNameGeo = nameGeo.split(' ');
     init(urlOrders);
@@ -62,11 +61,11 @@ function geoFunc ( nameGeo) {
 
 function init(url) {
     getApi(url)
-    .then( response => {
-        objOrders = response;
-        // console.log(response);
-        compareFunc(response);
-    });
+        .then(response => {
+            objOrders = response;
+            // console.log(response);
+            compareFunc(response);
+        });
 }
 
 function compareFunc(resp) {
@@ -86,11 +85,11 @@ function compareFunc(resp) {
 
 function init2(url, geoName) {
     getApi(url)
-    .then( response => {
-        objOrders = response;
-        // console.log(response);
-        createName(response, geoName);
-    });
+        .then(response => {
+            objOrders = response;
+            // console.log(response);
+            createName(response, geoName);
+        });
 }
 
 function createName(resp, geoName) {
@@ -102,17 +101,16 @@ function createName(resp, geoName) {
         name = resp[firstName].Прилагательное + resp[secondName].Существительное;
         if (thirdName == 0) {
             name = arrGeoDomen[i] + name;
-        }
-        else if (thirdName == 1) {
+        } else if (thirdName == 1) {
             name = name + arrGeoDomen[i];
         }
         // console.log(name);
         for (let j = 0; j < geoName.length; j++) {
-            if (arrGeoDomen[i] == geoName[j].country_short){
+            if (arrGeoDomen[i] == geoName[j].country_short) {
                 createTable(name.replace(/[\s.,%]/g, ''), i, geoName[j].country_ru)
             }
         }
-        
+
     }
     loader.style.display = 'none';
     mai.style.alignItems = 'normal';
@@ -122,7 +120,7 @@ function createName(resp, geoName) {
     kog.style.marginTop = '20px';
     kog.style.backgroundPosition = 'inherit';
     tableElem.style.display = 'table';
-    
+
     btnRepit.style.display = 'block';
 }
 
@@ -134,37 +132,36 @@ btnRepit.onclick = () => {
 
 function createTable(name, i, geo) {
     // for (let i = 0; i < arrLandName.length; i++) {
-        let tr = document.createElement('tr');
-        let th1 = document.createElement('th');
-        let th2 = document.createElement('th');
-        let th3 = document.createElement('th');
-        let th4 = document.createElement('th');
+    let tr = document.createElement('tr');
+    let th1 = document.createElement('th');
+    let th2 = document.createElement('th');
+    let th3 = document.createElement('th');
+    let th4 = document.createElement('th');
 
-        th1.textContent = i+1;
-        // th2.textContent = arrIdStream[i];
-        th2.textContent = geo;
-        th3.textContent = name;
-       
-               
+    th1.textContent = i + 1;
+    // th2.textContent = arrIdStream[i];
+    th2.textContent = geo;
+    th3.textContent = name;
 
-            
 
-        
-        if (i%2 == 0) {
-            tr.style.background = 'grey';
-            tr.style.color = '#fff';
-        }
-        else {
-            tr.style.background = '#fff';
-            tr.style.color = '#333';
-            
-        }
-        tr.appendChild(th1);
-        tr.appendChild(th2);
-        tr.appendChild(th3);
-        // tr.appendChild(th4);
-       
-        tbodyElem.appendChild(tr);
+
+
+
+
+    if (i % 2 == 0) {
+        tr.style.background = 'grey';
+        tr.style.color = '#fff';
+    } else {
+        tr.style.background = '#fff';
+        tr.style.color = '#333';
+
+    }
+    tr.appendChild(th1);
+    tr.appendChild(th2);
+    tr.appendChild(th3);
+    // tr.appendChild(th4);
+
+    tbodyElem.appendChild(tr);
     // }
     // tableElem.style.display = 'table';
 }
