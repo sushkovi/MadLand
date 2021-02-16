@@ -17,7 +17,7 @@
   align-items: center;
   background-color: #333;
   
-  padding-bottom: 20px;
+  
 }
 
 .kog {
@@ -27,7 +27,7 @@
   display: flex;
   width: 800px;
   height: 600px;
-  padding-bottom: 40px;
+  
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
@@ -73,8 +73,18 @@
 }
 
 .modal h1{
+  font-size: 40px;
+
   color:#fff;
   text-align: center;
+
+}
+#firstmodal h1{
+  font-size: 90px;
+
+  color:#ff2a5c;
+  text-align: center;
+
 }
 
 #secondmodal{
@@ -88,6 +98,10 @@
   width: 100px;
   margin-right: 20px;
 }
+.image-2 {
+  width: 300px;
+}
+
 
 .div-block {
   display: -webkit-box;
@@ -105,9 +119,6 @@
   align-items: center;
 }
 
-.image-2 {
-  width: 300px;
-}
 
 .div-block-2 {
   width: 100%;
@@ -146,11 +157,17 @@
 }
 
 .btn {
-  padding: 33px 65px;
+  padding: 20px 45px;
   border-radius: 5px;
   background-color: #ff2a5c;
   font-size: 20px;
+  color: #fff;
+  margin-left: 10px;
+
   
+}
+.btn:first-child{
+  margin-left: 0;
 }
 
 #gobtn1 {
@@ -227,7 +244,8 @@ table {
   
 }
 caption {
-  padding-bottom: 20px;
+  padding: 20px 0;
+
   font-size: 38px;
   width: 100%;
   line-height: 42px;

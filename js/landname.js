@@ -118,11 +118,11 @@ function createName(resp, geoName) {
     mai.style.alignItems = 'normal';
     mai.style.overflow = 'auto';
     // textar.style.display = 'block';
-    kog.style.display = 'flex';
-    kog.style.justifyContent = 'start';
+    kog.style.display = 'table';
     kog.style.marginTop = '20px';
+    kog.style.backgroundPosition = 'inherit';
     tableElem.style.display = 'table';
-    tableElem.style.marginBottom = '20px';
+    
     btnRepit.style.display = 'block';
 }
 
