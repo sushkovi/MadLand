@@ -25,7 +25,7 @@
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  
+  width: 800px;
   height: 600px;
   
   -webkit-box-orient: vertical;
@@ -169,8 +169,10 @@
   font-size: 20px;
   color: #fff;
   margin-left: 10px;
+}
+.btn:hover{
+color: #333;
 
-  
 }
 .btn:first-child{
   margin-left: 0;
